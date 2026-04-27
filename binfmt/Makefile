@@ -1,13 +1,5 @@
 obj-m += xor_binfmt.o
 
-CC := gcc-11
-EXTRA_CFLAGS += -fno-stack-protector \
-                -fcf-protection=none \
-                -mno-ibt \
-                -mcmodel=kernel \
-                -fno-pie \
-                -fno-pic \
-                -mno-red-zone
 all:
 	make -C /lib/modules/$(shell uname -r)/build M=$(PWD) modules
 

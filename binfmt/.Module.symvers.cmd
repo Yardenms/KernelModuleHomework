@@ -1,0 +1,1 @@
+cmd_/home/jordan/homework/KernelModuleHomework/binfmt/Module.symvers := sed 's/\.ko$$/\.o/' /home/jordan/homework/KernelModuleHomework/binfmt/modules.order | scripts/mod/modpost -m -a  -o /home/jordan/homework/KernelModuleHomework/binfmt/Module.symvers -e -i Module.symvers   -T -
