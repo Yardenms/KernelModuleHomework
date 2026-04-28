@@ -1,2 +1,0 @@
-/home/jordan/homework/KernelModuleHomework/binfmt/xor_binfmt.o
-
