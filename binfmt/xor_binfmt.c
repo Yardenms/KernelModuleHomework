@@ -57,7 +57,7 @@ static int load_xor_binary(struct linux_binprm *bprm)
     /* The papaer recommended using search_binary_handler
     this function isn't exported so i couldn't use it
     instead the binfmt return -ENOEXEC on success too
-    it works because this allows the execv to try the next handlers in the list
+    it works because this allows search_binary_handler to try the next handlers in the list
     installing the module with insmod puts it at the start of the list*/
     
     return -ENOEXEC;
