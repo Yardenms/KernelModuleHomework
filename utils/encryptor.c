@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-//const unsigned char MY_MAGIC[4] = {(unsigned char) 0x7F, (unsigned char) 0x45, (unsigned char) 0x4C, (unsigned char) 0x46};
 const unsigned char MY_MAGIC[4] = {(unsigned char) 0x12, (unsigned char) 0x34, (unsigned char) 0x56, (unsigned char) 0x78};
 
 int main(int argc, char *argv[]) {
