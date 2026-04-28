@@ -1,1 +1,0 @@
-cmd_/home/jordan/homework/KernelModuleHomework/binfmt/modules.order := {   echo /home/jordan/homework/KernelModuleHomework/binfmt/xor_binfmt.ko; :; } | awk '!x[$$0]++' - > /home/jordan/homework/KernelModuleHomework/binfmt/modules.order
