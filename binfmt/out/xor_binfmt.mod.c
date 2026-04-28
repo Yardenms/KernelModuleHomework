@@ -31,20 +31,17 @@ __used __section("__versions") = {
 	{ 0xd83a484d, "unregister_binfmt" },
 	{ 0x7813854b, "__register_binfmt" },
 	{ 0xd0da656b, "__stack_chk_fail" },
-	{ 0x12806518, "filp_close" },
 	{ 0x37a0cba, "kfree" },
-	{ 0xb13dfb9b, "vfs_fsync" },
+	{ 0x6e31897, "fput" },
 	{ 0xdc5b0bf4, "kernel_write" },
 	{ 0x469dd7f9, "kernel_read" },
-	{ 0x6e31897, "fput" },
+	{ 0x14208a30, "shmem_file_setup" },
 	{ 0xe71025ce, "kmem_cache_alloc_trace" },
 	{ 0xb0549baa, "kmalloc_caches" },
-	{ 0xe1d21214, "filp_open" },
-	{ 0x92997ed8, "_printk" },
 	{ 0xbdfb6dbb, "__fentry__" },
 };
 
 MODULE_INFO(depends, "");
 
 
-MODULE_INFO(srcversion, "98D08B936AA7096C9870BB1");
+MODULE_INFO(srcversion, "7ECCC4F87B753A8893E4B75");

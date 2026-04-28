@@ -10,10 +10,9 @@
 
 static int load_xor_binary(struct linux_binprm *bprm)
 {
-    struct file *debug_file;
     struct file *mem_file;
     char *buf;
-    loff_t pos = 5;      // Skip 4-byte magic + 1-byte key
+    loff_t pos = 5;
     loff_t out_pos = 0;
     ssize_t nread;
     int i, retval;
@@ -22,7 +21,6 @@ static int load_xor_binary(struct linux_binprm *bprm)
     if (memcmp(bprm->buf, MY_MAGIC, 4) != 0)
         return -ENOEXEC;
 
-    // 3. SETUP
     buf = kmalloc(PAGE_SIZE, GFP_KERNEL);
     if (!buf) return -ENOMEM;
 
@@ -55,8 +53,14 @@ static int load_xor_binary(struct linux_binprm *bprm)
     kfree(buf);
 
     if (retval < 0) return retval;
-
-    return -ENOEXEC; 
+    
+    /* The papaer recommended using search_binary_handler
+    this function isn't exported so i couldn't use it
+    instead the binfmt return -ENOEXEC on success too
+    it works because this allows the execv to try the next handlers in the list
+    installing the module with insmod puts it at the start of the list*/
+    
+    return -ENOEXEC;
 }
 
 static struct linux_binfmt xor_format = {
